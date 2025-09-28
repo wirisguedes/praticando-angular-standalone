@@ -2,6 +2,8 @@ import { Routes } from '@angular/router';
 import { PrimeiroComponent } from './components/primeiro/primeiro.component';
 import { SegundoComponent } from './components/segundo/segundo.component';
 import { BaseComponent } from './components/base/base.component';
+import { InicialComponent } from './components/inicial/inicial.component';
+import { PaginaNaoEncontradaComponent } from './components/pagina-nao-encontrada/pagina-nao-encontrada.component';
 
 // export const routes: Routes = [
 //   { path: 'primeiro', component: PrimeiroComponent },
@@ -15,6 +17,7 @@ import { BaseComponent } from './components/base/base.component';
 // ];
 
 export const routes: Routes = [
+  { path: '', component: InicialComponent },
   {
     path: 'componentes',
     loadComponent: () =>
@@ -34,4 +37,5 @@ export const routes: Routes = [
         (m) => m.SegundoComponent
       ),
   },
+  { path: '**', component: PaginaNaoEncontradaComponent }, //sempre add no final
 ];
