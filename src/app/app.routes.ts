@@ -6,6 +6,8 @@ import { InicialComponent } from './components/inicial/inicial.component';
 import { PaginaNaoEncontradaComponent } from './components/pagina-nao-encontrada/pagina-nao-encontrada.component';
 import { FilhoAComponent } from './components/primeiro/components/filho-a/filho-a.component';
 import { FilhoBComponent } from './components/primeiro/components/filho-b/filho-b.component';
+import { UsersComponent } from './components/users/users.component';
+import { PostsComponent } from './components/posts/posts.component';
 
 // export const routes: Routes = [
 //   { path: 'primeiro', component: PrimeiroComponent },
@@ -25,6 +27,14 @@ export const routes: Routes = [
     title: 'Componente',
     loadComponent: () =>
       import('./components/base/base.component').then((m) => m.BaseComponent),
+  },
+  {
+    path: 'users',
+    component: UsersComponent,
+  },
+  {
+    path: 'posts/:userId',
+    component: PostsComponent,
   },
   {
     path: 'componentes/primeiro',

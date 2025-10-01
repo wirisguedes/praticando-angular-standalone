@@ -27,5 +27,21 @@
   >
     <a class="menu__link" routerLink="componentes/segundo">Segundo</a>
   </div>
+
+  <div
+    class="menu__item"
+    routerLinkActive="menu__item--selected"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    <a class="menu__link" routerLink="users">Users</a>
+  </div>
+
+  <div
+    class="menu__item"
+    routerLinkActive="menu__item--selected"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    <a class="menu__link" routerLink="posts/:userId">Posts</a>
+  </div>
 </div>
 <router-outlet></router-outlet>
